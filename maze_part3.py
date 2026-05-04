@@ -113,13 +113,13 @@ while run:
         monsters.update()  
         monsters.draw(window) 
         sprite.groupcollide(bullets, barriers, True, False) 
-        if sprite.spritecollide(packman, monsters, False):
+    if sprite.spritecollide(packman, monsters, False):
             finish = True 
             img = image.load('sad.jpg')
             d = img.get_width() // img.get_height()  
             window.fill((255, 255, 255))
             window.blit(transform.scale(img, (win_height * d, win_height)), (90, 0)) 
-        if sprite.collide_rect(packman, final_sprite):
+    if sprite.collide_rect(packman, final_sprite):
             finish = True  
             img = image.load('the-end.jpg')
             window.fill((255, 255, 255))
